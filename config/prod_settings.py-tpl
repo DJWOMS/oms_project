@@ -1,0 +1,55 @@
+# coding=utf-8
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_KEY = '{{ secret_key }}'
+
+DEBUG = False
+
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_name',
+        'USER': 'user_name',
+        'PASSWORD': 'pass',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+DEFAULT_FROM_EMAIL = 'email'
+EMAIL_HOST = 'smtp'
+EMAIL_HOST_USER = 'email'
+EMAIL_HOST_PASSWORD = 'pass'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
+LOGGING = {
+     'version': 1,
+     'disable_existing_loggers': False,
+     'handlers': {
+         'file': {
+             'level': 'DEBUG',
+             'class': 'logging.FileHandler',
+             'filename': os.path.join(BASE_DIR, 'logs/debug.log')
+         },
+     },
+     'loggers': {
+         'django.request': {
+             'handlers': ['file'],
+             'level': 'DEBUG',
+             'propagate': True,
+         },
+     },
+ }
