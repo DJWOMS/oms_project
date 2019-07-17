@@ -40,7 +40,7 @@ TEMPLATES[0]["DIRS"] = [os.path.join(BASE_DIR, 'templates')]
 #     },
 # ]
 
-MIDDLEWARE = [
+#MIDDLEWARE = [
 #     'django.middleware.security.SecurityMiddleware',
 #     'django.contrib.sessions.middleware.SessionMiddleware',
 #     'debug_toolbar.middleware.DebugToolbarMiddleware',
