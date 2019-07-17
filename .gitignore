@@ -16,5 +16,5 @@ __pycache__/
 .pyc
 *.pyc
 media/*
-
+!media
 .DS_Store
