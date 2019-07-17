@@ -12,12 +12,12 @@ urlpatterns = [
 ]
 
 urlpatterns += cms_url
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_title = "OMS CMS"
 admin.site.site_header = "OMS CMS"
 
 if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     import debug_toolbar
     urlpatterns = [
         path('__debug__/', include(debug_toolbar.urls)),
