@@ -8,9 +8,15 @@
 
 **Установка:**
 
-- pip install git+https://gitlab.com/moses-team/backend/moses-cms.git
+- Установить CMS ::
 
-- django-admin startproject "name" --template=https://github.com/DJWOMS/oms_project/archive/master.zip
+
+    pip install git+https://github.com/DJWOMS/oms_cms.git
+    
+- Создать стартовый проект. В "name" указать имя вашего проекта ::
+
+    
+    django-admin startproject "name" --template=https://github.com/DJWOMS/oms_project/archive/master.zip
 
 **Команды**
 - Создание файлов миграций
