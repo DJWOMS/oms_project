@@ -52,10 +52,6 @@ rsa==4.0
 simplejson==3.16.0
 six==1.12.0
 snowballstemmer==1.2.1
-Sphinx==1.8.4
-sphinx-glpi-theme==0.3
-sphinx-rtd-theme==0.4.3
-sphinxcontrib-websupport==1.1.0
 sqlparse==0.2.4
 Unidecode==1.0.23
 uritemplate==3.0.0
