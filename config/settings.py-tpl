@@ -13,9 +13,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '{{ secret_key }}'
 
 # Application definition
+REMOVE_APPS = [
+
+]
+
+
+# Application definition
 INSTALLED_APPS += [
 
 ]
+
+INSTALLED_APPS = [v for v in INSTALLED_APPS if v not in REMOVE_APPS]
 
 ROOT_URLCONF = 'config.urls'
 
