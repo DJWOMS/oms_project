@@ -1,5 +1,5 @@
 [program:cms]
-command=/home/USER/venv/bin/gunicorn CMS.wsgi:application -c /home/USER/CMS/config/gunicorn.conf.py
+command=/home/USER/venv/bin/gunicorn config.wsgi:application -c /home/USER/CMS/config/gunicorn.conf.py
 directory=/home/USER/CMS
 user=USER
 autorestart=true
