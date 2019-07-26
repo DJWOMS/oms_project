@@ -8,26 +8,17 @@
 
 **Установка:**
 
-- Установить CMS 
-
-::
+- Установить CMS ::
 
     pip install git+https://github.com/DJWOMS/oms_cms.git
-    
-- Создать стартовый проект. В "name" указать имя вашего проекта
- 
-::
 
-    django-admin startproject "name" --template=https://github.com/DJWOMS/oms_project/archive/master.zip
+- Создать стартовый проект. В "name" указать имя вашего проекта ::
 
-**Команды**
-- Выполнение
+    oms-start "name"
 
--- python manage.py deploy
+- Создание БД и настройка CMS ::
 
-- Выполнение всех команд разом и заполнить тест данными
-
--- python manage.py deployGFS
+    python manage.py deployGFS
 
 
 
