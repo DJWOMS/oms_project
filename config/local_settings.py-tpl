@@ -12,9 +12,6 @@ ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 # Database
 
-#DATABASES = {}
-
-
 DATABASES = {}
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
