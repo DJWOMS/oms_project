@@ -18,7 +18,7 @@
 
 Создание БД и настройка CMS ::
 
-    python manage.py deployGFS
+    python manage.py deployOMS
 
 
 
