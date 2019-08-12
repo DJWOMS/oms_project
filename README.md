@@ -8,17 +8,19 @@
 
 **Установка:**
 
+Создать виртуальное окружение ::
+
+    python -m venv venv
+    
+Активировать виртуальное окружение
+
 Установить CMS ::
 
     pip install git+https://github.com/DJWOMS/oms_cms.git
-
-Создать стартовый проект. В "name" указать имя вашего проекта ::
-
-    oms-start "name"
-
-Создание БД и настройка CMS ::
-
-    python manage.py deployOMS
+    
+Создать стартовый проект ::
+    
+    oms-start
 
 
 
