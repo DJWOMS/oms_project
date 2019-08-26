@@ -3,6 +3,7 @@ Moses CMS settings for {{ project_name }} project.
 """
 
 import os
+from django.utils.translation import gettext_lazy as _
 
 from oms_cms.config.settings import *
 
@@ -42,29 +43,39 @@ TEMPLATES = [
                  'django.template.context_processors.request',
                  'django.contrib.auth.context_processors.auth',
                  'django.contrib.messages.context_processors.messages',
-                 'oms_cms.backend.languages.context_processors.set_lang',
              ],
          },
      },
 ]
 
 MIDDLEWARE = [
-     'django.middleware.security.SecurityMiddleware',
-     'django.contrib.sessions.middleware.SessionMiddleware',
-     'debug_toolbar.middleware.DebugToolbarMiddleware',
-     #'corsheaders.middleware.CorsMiddleware',
-     'django.middleware.common.CommonMiddleware',
-     'django.middleware.csrf.CsrfViewMiddleware',
-     'django.contrib.auth.middleware.AuthenticationMiddleware',
-     'django.contrib.messages.middleware.MessageMiddleware',
-     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+
+    # 'corsheaders.middleware.CorsMiddleware',
+
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'oms_cms.backend.pages.middleware.OmsPageFallbackMiddleware',
 ]
 
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru'
+
+LANGUAGES = (
+#    ('en', _('English')),
+    ('ru', _('Russia')),
+)
+
+APPEND_SLASH = True
 
 try:
     from .local_settings import *
