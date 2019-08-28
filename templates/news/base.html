@@ -3,5 +3,19 @@
 {% endblock seo %}
 
 {% block content %}
+    {% include 'news/categories.html' %}
+    <section class="blog_area">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-8">
+                {% block posts %}
 
+                {% endblock posts %}
+            </div>
+                {% block sidebar %}
+                    {% include "news/sidebar.html" %}
+                {% endblock sidebar %}
+            </div>
+        </div>
+    </section>
 {% endblock content %}
