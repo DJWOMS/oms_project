@@ -70,10 +70,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LANGUAGE_CODE = 'ru'
 
-LANGUAGES = (
-#    ('en', _('English')),
-    ('ru', _('Russia')),
-)
+LANGUAGES = ()
 
 APPEND_SLASH = True
 
